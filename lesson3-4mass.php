@@ -2,7 +2,7 @@
 <head>
 </head>
 <body>
-<form name="a" method="GET" action="<?=$_SERVER['PHP_SELF']?>">
+<form method="GET" action="<?=$_SERVER['PHP_SELF']?>">
     <input type="text" name="a">
     <input type="submit">
 </form>
