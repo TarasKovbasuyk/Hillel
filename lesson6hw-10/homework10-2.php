@@ -1,5 +1,13 @@
+<body>
+<form method="POST">
+    <p> Введите число </p>
+    <input type="text" name="num">
+    <input type="submit">
+</form>
+</body>
+</html>
 <?php
-$num = 10;
+$num = $_POST['num'];
 $sequence = [
     1,
     2,2,
@@ -13,7 +21,7 @@ $sequence = [
     ];
 function reverse ($sequence,$num){
     $num--;
-    if ($num>=0){
+    if ($num >= 0 && $num < count($sequence)){
     echo $sequence[$num];
     reverse($sequence,$num);
 }
