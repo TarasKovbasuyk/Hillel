@@ -1,3 +1,4 @@
+<html>
 <body>
 <form method="POST">
     <p> Введите число </p>
