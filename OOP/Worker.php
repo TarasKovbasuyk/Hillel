@@ -59,7 +59,11 @@ echo $Ivan->getSalary() + $Vasiliy->getSalary() . '<br>';
 echo $Ivan->getAge() + $Vasiliy->getAge() . '<br>';
 function showWorker(object $object)
 {
-    echo $object->getName() . " " . $object->getAge() . " " . "лет" . '<br>';
+    if ($object instanceof Worker && method_exists($object, 'getName') && method_exists($object, 'getAge')) {
+        echo $object->getName() . " " . $object->getAge() . " " . "лет" . '<br>';
+    } else {
+        echo "Данный сотрудник не найден";
+    }
 }
 
 showWorker($Ivan);
