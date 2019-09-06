@@ -5,7 +5,7 @@ class Worker
 {
     private $name, $age, $salary;
 
-    public function setName(string $name)
+    public function setName(string $name):self 
     {
         $this->name = $name;
         return $this;
@@ -17,7 +17,7 @@ class Worker
         return $this->name;
     }
 
-    public function setAge(int $age)
+    public function setAge(int $age):self
     {
         if ($this->checkAge($age)) {
             $this->age = $age;
@@ -30,7 +30,7 @@ class Worker
         return $this->age;
     }
 
-    public function setSalary(int $salary)
+    public function setSalary(int $salary):self 
     {
         $this->salary = $salary;
         return $this;
@@ -65,4 +65,3 @@ echo $workersAge . '<br>';
 
 $ivan->showInfo();
 $vasiliy->showInfo();
-
