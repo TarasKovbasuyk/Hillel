@@ -13,13 +13,11 @@ require_once('CsvWrite.php');
 $file = "data.csv";
 $csvRead = new CsvRead();
 $csvRead->read($file);
+$csvWrite = new Csv\CsvWrite();
 if (!empty($_POST['data'])) {
     $data[] = $_POST['data'];
-}else {
-    echo "Вы ничего не передали" . '<br>';
-}
-$csvWrite = new CsvWrite();
-try {
-    $csvWrite->write($file, $data);
-} catch (Exception $e) {
+    try {
+        $csvWrite->checkFileAndWrite($file, $data);
+    } catch (Exception $e) {
+    }
 }
