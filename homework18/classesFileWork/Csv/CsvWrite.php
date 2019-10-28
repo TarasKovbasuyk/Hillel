@@ -20,9 +20,7 @@ private $csvFile;
     public function write(array $data)
     {
         $handle = fopen($this->csvFile, "a");
-        foreach ($data as $value) {
-            fputcsv($handle, explode(";", $value), ";");
-        }
+        fputcsv($handle,$data,";");
         fclose($handle);
     }
 }
