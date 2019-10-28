@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WorkersList</title>
+</head>
+<body>
+<form method="POST">
+    <p>Worker Name (for Write)</p>
+    <div>
+        <input type="text" name="dataName">
+    </div>
+    <div>
+        <p>Worker Date(for Write)</p>
+        <input type="text" name="dataDate">
+    </div>
+    <input type="radio" id="Choice1"
+           name="fileType" value="csv">
+    <label for="Choice1">CSV</label>
+    <input type="radio" id="Choice2"
+           name="fileType" value="json">
+    <label for="Choice2">JSON</label>
+    <input type="radio" id="Choice3"
+           name="fileType" value="xml">
+    <label for="Choice3">XML</label>
+        <button type="submit" name="button" value="write">Write</button>
+        <button type="submit" name="button" value="read">Read</button>
+        <button type="submit" name="button" value="show">ShowTable</button>
+</form>
+</body>
+</html>
