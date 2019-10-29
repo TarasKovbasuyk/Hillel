@@ -2,5 +2,5 @@
 
 interface ShowTableInterface
 {
-public function show($data);
+public function show(array $data);
 }
